@@ -5,7 +5,7 @@ metadata:
     app.kubernetes.io/name: load-balancer-example
   name: hello-world
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: load-balancer-example
@@ -15,7 +15,7 @@ spec:
         app.kubernetes.io/name: load-balancer-example
     spec:
       containers:
-        - image: gcr.io/google-samples/hello-app:1.0
+        - image: gcr.io/google-samples/hello-app:2.0
           name: hello-world
           ports:
             - containerPort: 8080
