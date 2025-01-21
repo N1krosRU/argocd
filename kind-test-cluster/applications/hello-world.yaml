@@ -8,7 +8,7 @@ spec:
     name: in-cluster # Указывает, что разворачивание происходит в текущем кластере
     namespace: default # Укажите пространство имен, где будет разворачиваться деплоймент
   source:
-    repoURL: "git@github.com:N1krosRU/argocd.git" # Укажите URL репозитория с манифестами
+    repoURL: "https://github.com/N1krosRU/argocd.git" # Укажите URL репозитория с манифестами
     targetRevision: main # Укажите ветку, которая будет отслеживаться (например, main)
     path: "kind-test-cluster/projects/hello-world" # Укажите путь к папке, где находится ваш манифест деплоймента
   project: default # Укажите проект ArgoCD
