@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app.kubernetes.io/name: load-balancer-example
-  name: bye-world-deploy-v1
+  name: bye-world
 spec:
   replicas: 1
   selector:
