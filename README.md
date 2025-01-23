@@ -1,5 +1,12 @@
 # argocd
 
+Деплоим сущности Application которые будет следить за нашими манифестами
+`kubectl apply -f kind-test-cluster/applications/hello-world.yaml`
+`kubectl apply -f kind-test-cluster/applications/bye-world.yaml`
+
+Вариант Application of Applications, здесь мы деплоим корневой Application, который задеплоит все наши Applications
+`kubectl apply -f kind-test-cluster/root.yaml`
+
 Пример более сложной структуры репозитория
 ```bash
 │
