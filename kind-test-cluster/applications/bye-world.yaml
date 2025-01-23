@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-world
+  name: bye-world
   namespace: argocd
 spec:
   destination:
     name: in-cluster # Указывает, что разворачивание происходит в текущем кластере
-    namespace: hello-world # Укажите пространство имен, где будет разворачиваться деплоймент
+    namespace: bye-world # Укажите пространство имен, где будет разворачиваться деплоймент
   source:
     repoURL: "https://github.com/N1krosRU/argocd.git" # Укажите URL репозитория с манифестами
     targetRevision: main # Укажите ветку, которая будет отслеживаться (например, main)
-    path: "kind-test-cluster/projects/hello-world" # Укажите путь к папке, где находится ваш манифест деплоймента
+    path: "kind-test-cluster/projects/bye-world" # Укажите путь к папке, где находится ваш манифест деплоймента
   project: default # Укажите проект ArgoCD
   syncPolicy:
     automated:
